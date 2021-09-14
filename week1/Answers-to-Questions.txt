@@ -1,0 +1,26 @@
+1. How do I create a hidden file or folder? How do I display it in the CLI?
+
+  Step 1: on terminal, locate the file directory you would like to create the hidden file/folder in, 
+
+  Step 2: to create hidden folder type;
+     mkdir .<folderName> 
+  for hidden file,
+    touch .<fileName>
+
+  Step3: to be able to display the list of files/folders on CLI, including hiddens, type the following command;
+    ls -a
+  to see the content of hidden files;
+    cat .<fileName>
+  to edit the content;
+    nano .<fileName>
+
+
+2. How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+   Use the following code;
+     mkdir -p /<path of existing folder>/<folder2>/<folder1>/<folder>
+  there must? be an existing folder to nest multiple directories in it.
+
+
+3. How do I append a message to a file, without a newline character
+   Use the following code;
+    echo -n <"text"> >> <fileName>
