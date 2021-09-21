@@ -2,6 +2,8 @@ body{
   margin:0;
   padding:0;
   background-color: #f5f6f6;
+  max-width:1440px;
+  margin:auto;
 }
 
 ul{
@@ -13,7 +15,6 @@ a{
 }
 
 .first-part{
-  width: 100%;
   height: 70vh;
   background-image: url('https://wallpaperaccess.com/full/309051.jpg');
   background-size: cover;
@@ -26,6 +27,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  width:100%;
   background-color: #FFFFFF;
   box-shadow: 2px, 2px, 12px, black;
   padding: 0px, 5%;
@@ -80,25 +82,6 @@ nav ul li a:hover {
   line-height: 0px;
 }
 
-.text-container button {
-  font-family: 'Roboto', sans-serif;
-  height: 42px;
-  width: 130px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 10px;
-  outline:none;
-  margin: 0px 10px;
-  border:none;
-  cursor: pointer;
-}
-
-.text-container{
-  position: absolute;
-  left: 12%;
-  top: 30%;
-  transform: translate(-12%, -23%);
-}
 
 .hire-btn{
   color: #373636;
@@ -120,31 +103,47 @@ button:hover{
   transition: 0.2s;
 }
 
+.text-container button {
+  font-family: 'Roboto', sans-serif;
+  height: 42px;
+  width: 130px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  outline:none;
+  margin: 0px 10px;
+  border:none;
+  cursor: pointer;
+}
+
+/*Header*/
+.flex-box{
+  display:inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:20px;
+  margin:auto;
+}
 .model {
-  width:300px;
   height:300px;
-  position: absolute;
-  right: 12%;
-  top:25%;
   border-radius: 50%;
   z-index: 999;
 }
+.text-container{
+  min-width:300px;
+  display:inline-block;
+}
 
-
-/*About*/
 .about-container{
-  width: 55%;
+  display:block;
+  width:800px;
   height: 180px;
-  border: none;
   border-radius: 20px;
-  display: flex;
   box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
-  margin: -5% auto 10px auto;
-  position:relative;
-  justify-content: space-evenly;
-  align-items: center;
   font-family: 'Roboto', sans-serif;
   padding:40px;
+  margin:auto;
   background-color: white;
 }
 
@@ -167,7 +166,6 @@ button:hover{
 
 /*SOCIALICONS*/
 .social-icons{
-  width:100%;
   display:flex;
   align-items: center;
   justify-content:space-around;
@@ -204,22 +202,19 @@ button:hover{
 }
 
 /*Table- PORTFOLIO*/
-#main{
+main{
   font-family: 'Roboto', sans-serif;
   margin-top: 100px;
   display:flex;
-  width:100%;
 }
 
 .left-column {
   margin-left: 60px;
-  float: left;
   width: 65%;
 }
 .right-column {
   margin-right: 60px;
   width: 35%;
-  float: right;
   padding-left: 20px ;
 }
 .card {
@@ -281,7 +276,6 @@ h3 span{
 .flex-container {
   display: flex;
   flex-wrap: wrap;
-  width:100%;
 }
 
 .fa-fa {
