@@ -1,6 +1,6 @@
-*{
-  margin:0px;
-  padding:0px;
+* {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
@@ -10,71 +10,72 @@
   src: url(./fonts/Ubuntu-Light.ttf);
 }
 
-body{
+body {
   background-color: #E4EAF1;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 200;
   font-size: 16px;
 }
 
-main{
+main {
   max-width: 1440px;
   margin: auto;
 }
-section{
-  margin:10px;
-  padding:4px;
+section {
+  margin: 10px;
   /* below is useful for the container to expand and contain floating elements if there are the only ones in the it */
-  overflow:hidden;
+  /* overflow: hidden; */
+  clear: both;
 }
 
-h1{
-  font-size:3rem;
-  padding-left:48px;
-  padding-top:48px;
+h1 {
+  font-size: 3rem;
+  padding-left: 48px;
+  padding-top: 48px;
   color: #B80C09;
   background-color: #9CC1E7;
-  clear:both;
-  border-bottom:4px solid #235789;
+  border-bottom: 4px solid #235789;
 }
-h2{
-  text-align:center;
-  color:#EFF5FB;
-  background-color:#B80C09;
-  margin:16px 0px 12px 0px;
+h2 {
+  text-align: center;
+  color: #EFF5FB;
+  background-color: #B80C09;
+  margin: 16px 0px 12px 0px;
 }
-
 
 /*_____Cards Start______*/
-h3{
-  text-align:center;
-  color:#EFF5FB;
+h3 {
+  text-align: center;
+  color: #EFF5FB;
   background-color: #0C1E31;
-  margin-bottom:12px;
+  margin-bottom: 12px;
   line-height: 3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-li{
-  margin:.5%;
-  width:24%;
-  height:600px;
-  background-color:#FFF;
+li {
+  margin: .5%;
+  width: 24%;
+  height: 600px;
+  background-color: #FFF;
   list-style: none;
   /*below 2 lines are for stretching the pharagraph box*/
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 .grid-item:nth-child(1) {
-  width:49%;
+  width: 49%;
 }
-li.grid-item img{
-  width:80%;
-  margin:0 10%;
+li.grid-item img {
+  width: 80%;
+  margin: 0 10%;
 }
-p{
-  padding:20px;
+p {
+  padding: 20px;
   background-color: #EFF5FB;
-  line-height:1.5;
-  flex:auto;
+  line-height: 1.5;
+  flex: auto;
 }
 p::first-letter {
   color: #B80C09;
@@ -88,17 +89,17 @@ p::first-letter {
   line-height: 1;
 }
 /*Since Arabic is read from left to right, First letter is floated to the right with the below line*/
-.grid-item:nth-child(2) p::first-letter{
-float:right;
+.grid-item:nth-child(2) p::first-letter {
+float: right;
 }
 
 p::selection {
   background-color: #FDC5C4;
 }
-li.grid-item:hover{
-  box-shadow:2px 2px 4px 2px #06121f;
+li.grid-item:hover {
+  box-shadow: 2px 2px 4px 2px #06121f;
 }
-h3:hover{
+h3:hover {
   cursor: pointer;
   box-shadow:-1px -2px 2px 2px #a84442 inset;
   background-color: #8a0a08;
@@ -109,30 +110,41 @@ h3:hover{
 
 
 /*_______Float Controls________*/
-.grid-floats .grid-item{
-  float:left;
+.grid-floats .grid-item {
+  float: left;
 }
 
 /*_______Flexbox Controls________*/
-.grid-flex{
-  display:flex;
+.grid-flex {
+  display: flex;
   flex-wrap: wrap;
 }
 
+/* .grid-flex {
+  margin-left: 10px; // (space on the left of the parent)
+}
+
+.grid-flex .grid-item:first-child {
+     flex-basis: calc(50% - 10px); 
+}
+.grid-flex .grid-item {
+   flex-basis: calc(25% - 10px); 
+    margin: 0 10px 10px 0; (top - right - bottom - left)
+} */
 /*___Media Queries___*/
 
 @media screen and (max-width:768px) {
   .grid-item:nth-child(1), .grid-item:nth-child(2) {
-    width:49%;
+    width: 49%;
   }
-  .grid-item{
-    width:32.33%;
+  .grid-item {
+    width: 32.33%;
   }
 }
 
 @media screen and (max-width:425px) {
   .grid-item:nth-child(1), .grid-item:nth-child(2),.grid-item {
-    width:90%;
-    margin:5%;
+    width: 90%;
+    margin: 5%;
   }
 } 

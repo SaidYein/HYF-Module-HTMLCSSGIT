@@ -1,0 +1,196 @@
+@font-face {
+font-family: 'Uber Move Medium';
+font-style: normal;
+font-weight: normal;
+src: local('Uber Move Medium'), url('UberMoveMedium.woff') format('woff');
+}
+@font-face {
+font-family: 'Uber Move Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Uber Move Bold'), url('UberMoveBold.woff') format('woff');
+}
+body {
+    font-family: 'Uber Move Medium';
+    font-size: 16px;
+}
+header {
+    background: url(media/uber3.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 732px;
+}
+
+/* SignUp Container */
+header .container{
+    width:540px;
+    margin-top: 72px;
+    margin-left: 10%;
+}
+.btn, .tabs a {
+    text-transform: none;
+}
+.tabs a, .flex_container span  {
+    font-size: 14px !important;
+    font-weight: 300;
+    height: 80px !important;
+}
+.tabs .indicator {
+    background-color:black;
+    height:3px;
+}
+.tabs .tab a:focus.active {
+    background-color: transparent;
+    outline: none;
+}
+.tabs {
+    height: 80px !important;
+}
+.col {
+    margin-top: 20px;
+}
+.col.s10 p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 30px 0 30px 0;
+}
+.col.s10 a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: block;
+    margin: 30px 0 30px 0;
+}
+.section {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+.material-icons {
+    display: block;
+}
+.signup h3 {
+    margin:0;
+}
+.signup .inputs {
+    margin-top:30px;
+}
+.signup p {
+    font-size: 18px;
+}
+/* SignUp Container */
+
+
+.parallax-container{
+    height:300px;
+}
+
+
+
+/* Flex-box */
+
+.flex_container, .mid-three{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.top-two, .mid-three, .flex_container h3{
+    display: flex;
+    justify-content: space-between;
+    width: 80% ;
+    margin: 30px auto;
+}
+.right-box, .left-box {
+    flex-basis: 47%;
+}
+.left-links a, .cards a {
+    margin-right: 10px;
+    font-size:14px;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cards {
+    flex-basis: 30%;
+    padding:10px;
+}
+.apps {
+    background-color: rgb(242, 252, 255);
+}
+.apps, .sign-ups {
+    flex-basis:100%;
+    margin: 30px auto;
+}
+.app-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.app-box .card {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    flex-basis: 37.6%;
+    padding:20px;
+    margin-right:30px;
+}
+.app-box .card img {
+    width:144px;
+}
+.app-box .card i:hover{
+    transform: translate(5px);
+    cursor:pointer;
+}
+
+
+/* Flex-box */
+
+
+
+/* Footer */
+footer div {
+    margin:40px
+}
+footer li{
+    line-height: 2;
+}
+.lists, .social-media, .copyrights{
+    display:flex;
+    flex-wrap: wrap;
+}
+.social-media, .copyrights {
+    justify-content: space-between;
+}
+.lists .list{
+    flex-basis: 18%;
+}
+.icons {
+    display:flex;
+    flex-direction: row;
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+.lists2 {
+    display:flex;
+    flex-direction: row;
+    flex-basis: 20%;
+    justify-content: space-between;
+}
+.lists2 img {
+    width: 50%;
+}
+.icons a {
+    display:flex;
+    flex-direction: row;
+}
+.item nav{
+    display:flex;
+    align-items: center;
+    background-color: transparent;
+}
+.item nav li{
+    margin: 10px;
+}
+
+/* Footer */
