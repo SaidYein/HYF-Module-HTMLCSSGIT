@@ -12,5 +12,6 @@
 
 ## Week3
 
-1. [Favorite CMD commands](https://saidyein.github.io/HYF-Module-HTMLCSSGIT/hyf-html-exercises/week3/animals)
-2. [Drones Responsive Website](https://saidyein.github.io/HYF-Module-HTMLCSSGIT/hyf-html-exercises/week3/website_clone-UBER)
+1. [Animals > pets.txt ](https://saidyein.github.io/HYF-Module-HTMLCSSGIT/hyf-html-exercises/week3/animals/pets.txt)
+2. [Animals > zoo.txt ](https://saidyein.github.io/HYF-Module-HTMLCSSGIT/hyf-html-exercises/week3/animals/zoo.txt)
+3. [UBER-Clone (MaterializeCSS)](https://saidyein.github.io/HYF-Module-HTMLCSSGIT/hyf-html-exercises/week3/website_clone-UBER)
