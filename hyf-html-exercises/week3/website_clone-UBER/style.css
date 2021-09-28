@@ -12,7 +12,7 @@ src: local('Uber Move Bold'), url('UberMoveBold.woff') format('woff');
 }
 body {
     font-family: 'Uber Move Medium';
-    font-size: 16px;
+    font-size: 18px;
 }
 header {
     background: url(media/uber3.jpeg);
@@ -30,8 +30,8 @@ header .container{
 .btn, .tabs a {
     text-transform: none;
 }
-.tabs a, .flex_container span  {
-    font-size: 14px !important;
+.tabs, .tabs a, .flex_container span  {
+    font-size: 14px ;
     font-weight: 300;
     height: 80px !important;
 }
@@ -43,15 +43,11 @@ header .container{
     background-color: transparent;
     outline: none;
 }
-.tabs {
-    height: 80px !important;
-}
-.col {
+.col, .col.s10 p, .col.s10 a  {
     margin-top: 20px;
 }
 .col.s10 p {
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
     margin: 30px 0 30px 0;
 }
 .col.s10 a {
@@ -60,41 +56,30 @@ header .container{
     display: block;
     margin: 30px 0 30px 0;
 }
-.section {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px auto;
-}
 .material-icons {
     display: block;
 }
-.signup h3 {
-    margin:0;
-}
 .signup .inputs {
-    margin-top:30px;
-}
-.signup p {
-    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 /* SignUp Container */
 
 
-.parallax-container{
-    height:300px;
+.parallax-container h4, .parallax-container p{
+    text-shadow: 1px 1px rgb(243, 243, 243) !important;
 }
-
+.parallax-container{
+    height: 300px;
+}
 
 
 /* Flex-box */
-
 .flex_container, .mid-three{
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
-
-.top-two, .mid-three, .flex_container h3{
+.top-two, .mid-three, .flex_container h3 {
     display: flex;
     justify-content: space-between;
     width: 80% ;
@@ -105,20 +90,19 @@ header .container{
 }
 .left-links a, .cards a {
     margin-right: 10px;
-    font-size:14px;
+    font-size: 14px;
     text-decoration: underline;
     font-family: 'Roboto', sans-serif;
 }
-
 .cards {
     flex-basis: 30%;
-    padding:10px;
+    padding: 10px;
 }
 .apps {
     background-color: rgb(242, 252, 255);
 }
 .apps, .sign-ups {
-    flex-basis:100%;
+    flex-basis: 100%;
     margin: 30px auto;
 }
 .app-box {
@@ -136,14 +120,12 @@ header .container{
     margin-right:30px;
 }
 .app-box .card img {
-    width:144px;
+    width:20%;
 }
-.app-box .card i:hover{
+.app-box .card i:hover {
     transform: translate(5px);
-    cursor:pointer;
+    cursor: pointer;
 }
-
-
 /* Flex-box */
 
 
@@ -162,7 +144,7 @@ footer li{
 .social-media, .copyrights {
     justify-content: space-between;
 }
-.lists .list{
+.lists .list {
     flex-basis: 18%;
 }
 .icons {
@@ -181,16 +163,95 @@ footer li{
     width: 50%;
 }
 .icons a {
-    display:flex;
+    display: flex;
     flex-direction: row;
 }
-.item nav{
-    display:flex;
+.item nav {
+    display: flex;
     align-items: center;
     background-color: transparent;
 }
-.item nav li{
+.item nav li {
     margin: 10px;
 }
 
 /* Footer */
+@media screen and (min-width:426px) and (max-width:768px) {
+    header .container{
+        width: 100%;
+        margin: 0;
+    }
+    .mid-three .cards{
+        flex-basis: 40%;
+    }
+    .app-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:20px;
+    }
+    .app-box .card {
+        flex-basis: 100%;
+    }
+    footer div {
+        margin:10px
+    }
+    .lists .list, .lists2  {
+        flex-basis: 40%;
+    }
+    .icons a {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:425px) {
+    header .container{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .top-two, .mid-three{
+        flex-wrap: wrap;
+        width: 100% ;
+        margin:0;
+    }
+    .right-box, .left-box, .cards{
+        flex-basis: 100%;
+        padding:10px;
+        background-color:rgb(247, 244, 244);
+        margin:10px auto;
+    }
+    .app-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .app-box .card {
+        flex-basis: 100%;
+    }
+  
+    .app-box .card img {
+        width:30%;
+    }
+    .app-box .card h5{
+        margin-left: 10px;
+    }
+    footer div {
+        margin:10px
+    }
+    footer li{
+        line-height: 1.5;
+    }
+    .lists .list {
+        flex-basis: 100%;
+    }
+    .lists2 {
+        flex-basis: 40%;
+    }
+    .lists2 img {
+        width: 60%;
+    }
+    .icons a {
+        margin-right: 10px;
+    }
+    
+}

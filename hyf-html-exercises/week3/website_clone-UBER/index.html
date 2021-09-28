@@ -21,10 +21,12 @@
 <body>
     <header>
         <!-- NavBar -->
-        <div class="navbar-fixed">
+        <div class="navbar">
             <nav>
                 <div class="nav nav-wrapper black">
-                    <a href="#" style="margin-left:36px;" class="brand-logo"><span>Uber</span></a>
+                    <a href="#" style="margin-left:36px;" class="brand-logo">
+                        <span>Uber</span>
+                    </a>
                     <a href="" class="sidenav-trigger right" data-target="mobile-menu">
                         <i class="material-icons">drag_handle</i>
                     </a>
@@ -33,13 +35,13 @@
                         <li>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class='dropdown-trigger' data-target='dropdown'>
                                 <span>Company</span>
                                 <i class="material-icons right">keyboard_arrow_down</i>
                             </a>
                         </li>
-                        <li><a href="#">Safety</a></li>
-                        <li><a href="#">Help</a></li>
+                        <li><a href="#safety">Safety</a></li>
+                        <li><a href="#footer">Help</a></li>
                         <li><a href="#">COVID-19 resources</a></li>
                     </ul>
                     <ul style="margin-right:10px;" class="right hide-on-med-and-down">
@@ -50,7 +52,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#apps">
                                 <i class="material-icons left">apps</i>
                                 <span>Products</span>
                             </a>
@@ -64,6 +66,7 @@
                         <li><a href="#">Sign up</a></li>
                     </ul>
 
+                <!-- mobile menu on small screens -->
                     <ul class="sidenav" id="mobile-menu">
                         <li>
                             <a href="#">
@@ -71,8 +74,8 @@
                                 <i class="material-icons right">keyboard_arrow_down</i>
                             </a>
                         </li>
-                        <li><a href="#">Safety</a></li>
-                        <li><a href="#">Help</a></li>
+                        <li><a href="#safety">Safety</a></li>
+                        <li><a href="#footer">Help</a></li>
                         <li><a href="#">COVID-19 resources</a></li>
                         <li>
                             <a href="#">
@@ -81,7 +84,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#apps">
                                 <i class="material-icons left">apps</i>
                                 <span class="black-text">Products</span>
                             </a>
@@ -94,16 +97,28 @@
                         </li>
                     </ul>
 
+                <!-- dropdown content for 'Company' -->
+                    <ul id='dropdown' class='dropdown-content'>
+                        <li><a class="black-text" href="#">About Us</a></li>
+                        <li><a class="black-text" href="#">Our offerings</a></li>
+                        <li><a class="black-text" href="#about">How Uber Works</a></li>
+                        <li><a class="black-text" href="#about">Global Citizenship</a></li>
+                        <li><a class="black-text" href="#about">Newsroom</a></li>
+                        <li><a class="black-text" href="#investor">Investor Relations</a></li>
+                        <li><a class="black-text" href="#footer">Blog</a></li>
+                        <li><a class="black-text" href="#career">Careers</a></li>
+                      </ul>
+
                 </div>
             </nav>
         </div>
         <!-- NavBar -->
 
-        <!-- Signup/Photo -->
+        <!-- Signup box-->
         <div class="container signup">
             <div class="row white">
 
-                <div class="col s12">
+                <div class="col xs12">
                     <ul class="tabs">
                         <li class="tab col s4">
                             <a class="active black-text" href="#drive">
@@ -141,17 +156,17 @@
                     </div>
                     <div class="section">
                         <button class="btn black">Request now</button>
-                        <button class="btn grey lighten-2 black-text">Schedule for later</button>
+                        <button class="btn grey lighten-2 black-text right">Schedule for later</button>
                     </div>
                 </section>
             </div>
         </div>
-        <!-- Signup/Photo -->
+        <!-- Signup box-->
     </header>
 
 
     <!-- Parallax -->
-    <div class="parallax-container">
+    <div id="investor" class="scrollspy parallax-container">
         <div class="contianer" style="position: absolute; top:80px; left:80px;">
             <h4 class="black-text">Uber for Bussiness</h3>
                 <p>Transform the way your company moves and feeds its people</p>
@@ -168,7 +183,7 @@
     <div class="flex_container">
 
         <h3>Focused on safety, wherever you go</h3>
-        <section class="top-two">
+        <section id="safety" class="scrollspy top-two">
             <div class="left-box">
                 <img class="responsive-img" src="./media/driver1.jpeg" alt="">
                 <p>Our commitment to your safety</p>
@@ -189,7 +204,8 @@
                 </div>
             </div>
         </section>
-        <section class="mid-three">
+
+        <section id="about" class="scrollspy mid-three">
             <div class="cards">
                 <div class="title">
                     <i class="material-icons">people_outline</i>
@@ -216,7 +232,8 @@
                 <a href="#" class="black-text">Learn more</a>
             </div>
         </section>
-        <section class="apps">
+
+        <section id="apps" class="scrollspy apps">
             <h3>There's more to love in the apps</h3>
             <div class="app-box">
                 <div class="card">
@@ -231,7 +248,8 @@
                 </div>
             </div>
         </section>
-        <section class="sign-ups">
+
+        <section id="career" class="scrollspy sign-ups">
             <div class="app-box">
                 <div class="card">
                     <h4>Sign up to drive </h4>
@@ -250,7 +268,7 @@
 
 
     <!-- Footer -->
-    <footer class="page-footer black white-text">
+    <footer id="footer" class="scrollspy page-footer black white-text">
         <div>
             <div class="first-line">
                 <div class="title"><h5>Uber</h5></div>
@@ -348,15 +366,10 @@
     <script>
         $(document).ready(function () {
             $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
             $('.parallax').parallax();
             $('.tabs').tabs();
-            $('.datepicker').datepicker({
-                disableWeekends: true
-            });
-            $('.tooltipped').tooltip();
             $('.scrollspy').scrollSpy();
-
+            $('.dropdown-trigger').dropdown()
         });
     </script>
 </body>
