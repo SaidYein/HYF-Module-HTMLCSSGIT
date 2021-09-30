@@ -120,31 +120,45 @@ h3:hover {
   flex-wrap: wrap;
 }
 
-/* .grid-flex {
-  margin-left: 10px; // (space on the left of the parent)
+.grid-flex {
+  margin-left: 10px;
 }
 
 .grid-flex .grid-item:first-child {
-     flex-basis: calc(50% - 10px); 
+    flex-basis: calc(50% - 10px); 
 }
 .grid-flex .grid-item {
-   flex-basis: calc(25% - 10px); 
-    margin: 0 10px 10px 0; (top - right - bottom - left)
-} */
+  flex-basis: calc(25% - 10px); 
+    margin: 0 10px 10px 0; 
+}
 /*___Media Queries___*/
 
 @media screen and (max-width:768px) {
-  .grid-item:nth-child(1), .grid-item:nth-child(2) {
+  .grid-flex .grid-item:nth-child(1),.grid-flex .grid-item:nth-child(2) {
+    flex-basis: calc(50% - 10px);
+  }
+  .grid-flex .grid-item {
+    flex-basis: calc(33.33% - 10px);
+  }
+
+  .grid-floats .grid-item:nth-child(1), .grid-floats .grid-item:nth-child(2) {
     width: 49%;
   }
-  .grid-item {
+  .grid-floats .grid-item {
     width: 32.33%;
   }
+  
 }
 
 @media screen and (max-width:425px) {
-  .grid-item:nth-child(1), .grid-item:nth-child(2),.grid-item {
+  .grid-floats .grid-item:nth-child(1), .grid-floats .grid-item:nth-child(2), .grid-floats .grid-item {
     width: 90%;
     margin: 5%;
   }
+
+  .grid-flex .grid-item:first-child, .grid-flex .grid-item:nth-child(2), .grid-flex .grid-item {
+    flex-basis: 90%;
+    margin: 5%;
+  }
+
 } 
