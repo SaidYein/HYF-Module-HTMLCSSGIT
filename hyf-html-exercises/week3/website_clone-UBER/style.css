@@ -69,9 +69,12 @@ header .container{
 .parallax-container h4, .parallax-container p{
     text-shadow: 1px 1px rgb(243, 243, 243) !important;
 }
-.parallax-container{
-    height: 300px;
+.newClass{
+    height: 200px;
 }
+/* .parallax-container {
+    height: 300px;
+} */
 
 
 /* Flex-box */
